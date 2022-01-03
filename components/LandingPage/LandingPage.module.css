@@ -1,0 +1,71 @@
+.container{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.find{ 
+  font-weight: 24px;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.slogan{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.description{ 
+  font-size: 24px;
+  color: #737373;
+  line-height: 40px;
+}
+
+.descriptionContainer{
+  width: 510px;
+  height: 450px;
+}
+
+.logoContainers{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.search{
+  background: linear-gradient(91.03deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 71.56%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  border: none;
+  width: 450px;
+  height: 55px;
+  padding-left: 30px;
+}
+
+.searchButton{ 
+  background-color:#FF8080;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  line-height: 24px;
+  border-radius: 60px;
+  width: 120px ;
+  height: 55px;
+  text-align: center;
+  margin-left: -120px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.buttonContainer{ 
+  display: flex;
+  align-items: center;
+}

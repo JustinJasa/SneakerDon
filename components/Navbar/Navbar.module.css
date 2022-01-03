@@ -1,0 +1,32 @@
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.navButtons{
+  font-size: 18px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.navbar{ 
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navbar:hover{
+  cursor: url(../../public/images/j1-icon.png);
+}
+
+.navButtonWhite{ 
+  font-size: 18px;
+  background-color:#FF8080;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 60px;
+}
