@@ -10,9 +10,11 @@ export default function Navbar() {
 
 	return (
 		<nav className={css.navbar}>
-			<Image src={Logo} width={120} height={120} alt="logo" />
+			<Link href="/" passHref>
+				<Image src={Logo} width={120} height={120} alt="logo" />
+			</Link>
 			<div className={css.container}>
-				<Link href="/products">
+				<Link href="/search" passHref>
 					<p className={css.navButtons}>Sneakers</p>
 				</Link>
 				<a

@@ -8,7 +8,9 @@ import FlightClub from '../../public/images/flightclub.png';
 import css from './LandingPage.module.css';
 import PopularProducts from '../PopularProducts/PopularProducts';
 
-function LandingPage() {
+function LandingPage({ popular }) {
+	const data = popular;
+
 	return (
 		<>
 			<section className={css.container}>
@@ -73,7 +75,7 @@ function LandingPage() {
 					</div>
 				</div>
 			</section>
-			<PopularProducts />
+			<PopularProducts popular={data} />
 		</>
 	);
 }

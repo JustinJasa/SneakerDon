@@ -1,21 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import css from './PopularProducts.module.css';
+import Slider from 'react-slick';
+import Image from 'next/image';
+import Link from 'next/link';
 
-function PopularProducts() {
-	const getPopularSneakers = async () => {
-		const data = await fetch('http://localhost:8080/popular');
-		let popular = await data.json();
-		console.log(popular);
-	};
-
-	useEffect(() => {
-		getPopularSneakers();
-	});
+function PopularProducts({ popular }) {
+	const data = popular;
 
 	return (
 		<div>
-			<div>Hello Putas</div>
+			<div className={css.heading}>
+				<h1>Popular Sneakers</h1>
+			</div>
+			<div className={css.container}>
+				<div className={css.carousel}>
+					{data.map((sneaker, i) => {
+						return (
+							<>
+								<Link
+									href={`/sneakers/${sneaker._id}`}
+									key={sneaker._id}
+									passHref
+								>
+									<div className={css.card}>
+										<Image
+											loader={() => sneaker.thumbnail}
+											className={css.thumbnail}
+											src={sneaker.thumbnail}
+											alt={sneaker.shoeName}
+											width={200}
+											height={200}
+										/>
+										<h2 className={css.title}>{sneaker.shoeName}</h2>
+									</div>
+								</Link>
+							</>
+						);
+					})}
+				</div>
+			</div>
 		</div>
 	);
 }
-
 export default PopularProducts;
