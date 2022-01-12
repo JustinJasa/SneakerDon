@@ -18,13 +18,12 @@ function PopularProducts({ popular }) {
 						return (
 							<>
 								<Link
-									href={`/sneakers/${sneaker._id}`}
+									href={`/sneakers/${sneaker.styleID}`}
 									key={sneaker._id}
 									passHref
 								>
 									<div className={css.card}>
 										<Image
-											loader={() => sneaker.thumbnail}
 											className={css.thumbnail}
 											src={sneaker.thumbnail}
 											alt={sneaker.shoeName}
