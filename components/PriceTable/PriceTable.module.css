@@ -1,0 +1,13 @@
+.heading {
+	text-align: center;
+}
+
+.tableContainer {
+	margin-top: 100px;
+}
+
+.priceTable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

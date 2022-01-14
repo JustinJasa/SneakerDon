@@ -27,8 +27,6 @@ export const getStaticProps = async ({ params }) => {
 };
 
 function Details(props) {
-	console.log(props.sneakers);
-
 	const data = props.sneakers;
 
 	return (
