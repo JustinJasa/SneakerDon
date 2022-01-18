@@ -1,0 +1,13 @@
+.search {
+	background: linear-gradient(
+		91.03deg,
+		rgba(255, 255, 255, 0.6) 0%,
+		rgba(255, 255, 255, 0.2) 71.56%
+	);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 60px;
+	border: none;
+	width: 450px;
+	height: 55px;
+	padding-left: 30px;
+}

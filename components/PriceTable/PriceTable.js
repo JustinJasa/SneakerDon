@@ -12,8 +12,6 @@ function PriceTable({ priceData }) {
 	let shoeSizes;
 	let prices = priceData.resellPrices;
 
-	console.log(priceData);
-
 	// fetches sizes of all resell platforms
 	for (var size in prices?.stockX) {
 		sizes.add(size);
@@ -30,8 +28,6 @@ function PriceTable({ priceData }) {
 	shoeSizes = Array.from(sizes).sort(function (a, b) {
 		return a - b;
 	});
-
-	console.log(shoeSizes);
 
 	return (
 		<div className={css.tableContainer}>

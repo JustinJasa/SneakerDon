@@ -17,11 +17,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(
-		133.32deg,
-		rgba(255, 255, 255, 0.6) 2.77%,
-		rgba(190, 190, 190, 0.56) 100%
-	);
+	background: #fefefe;
 	border: 1px solid #ffffff;
 	box-sizing: border-box;
 	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);

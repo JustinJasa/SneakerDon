@@ -5,13 +5,13 @@ import ImageCarousel from '../ImageCarousel/ImageCarousel';
 import css from './SneakerDetail.module.css';
 import ResellLinks from '../ResellLinks/ResellLinks';
 import PriceTable from '../PriceTable/PriceTable';
+import RelatedProducts from '../RelatedProducts/RelatedProducts';
+import { Container } from 'react-bootstrap';
 
 function SneakerDetail({ data }) {
 	const sneakerData = data;
 	const images = sneakerData.imageLinks;
 	const links = sneakerData.resellLinks;
-
-	console.log(sneakerData);
 
 	return (
 		<div>
@@ -57,6 +57,7 @@ function SneakerDetail({ data }) {
 			</div>
 			<hr />
 			<PriceTable priceData={sneakerData} />
+			<RelatedProducts />
 		</div>
 	);
 }

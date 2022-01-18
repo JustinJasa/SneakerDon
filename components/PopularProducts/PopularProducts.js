@@ -14,7 +14,7 @@ function PopularProducts({ popular }) {
 			</div>
 			<div className={css.container}>
 				<div className={css.carousel}>
-					{data.map((sneaker, i) => {
+					{data.slice(0, 4).map((sneaker, i) => {
 						return (
 							<>
 								<Link

@@ -34,9 +34,23 @@ td {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding-right: 20px;
+	text-align: center;
 }
 
 td:first-child {
 	padding-left: 20px;
 	padding-right: 0;
+	text-align: center;
+}
+
+input {
+	background: linear-gradient(
+		90.72deg,
+		rgba(255, 255, 255, 0.6) 2.94%,
+		rgba(255, 255, 255, 0.2) 99.81%
+	);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.35);
+	border-radius: 60px;
+	border: none;
+	padding: 20px;
 }

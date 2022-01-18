@@ -8,16 +8,7 @@ export async function getStaticProps() {
 	const popular = await fetch(`http://localhost:8080/popular`);
 	const popularData = await popular.json();
 
-	const moreSneakers = await fetch(`http://localhost:8080/products`);
-	const sneakers = await moreSneakers.json();
-
 	if (!popularData) {
-		return {
-			notFound: true,
-		};
-	}
-
-	if (!sneakers) {
 		return {
 			notFound: true,
 		};
@@ -26,7 +17,6 @@ export async function getStaticProps() {
 	return {
 		props: {
 			popular: popularData,
-			sneakers: sneakers,
 		}, // will be passed to the page component as props
 	};
 }

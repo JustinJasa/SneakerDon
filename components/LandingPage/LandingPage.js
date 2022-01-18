@@ -29,7 +29,7 @@ function LandingPage({ popular }) {
 						<div className={css.buttonContainer}>
 							<input
 								type="text"
-								placeholder="E.g. Jordan 1's"
+								placeholder="Jordan 1's"
 								className={css.search}
 							/>
 							<h3 className={css.searchButton}>Search</h3>
