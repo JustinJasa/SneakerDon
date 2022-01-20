@@ -31,7 +31,7 @@ function PriceTable({ priceData }) {
 
 	return (
 		<div className={css.tableContainer}>
-			<h2 className={css.heading}>Prices</h2>
+			<h2 className={css.heading}>Marketplace Prices</h2>
 			<div className={css.priceTable}>
 				<Table responsive>
 					<thead>

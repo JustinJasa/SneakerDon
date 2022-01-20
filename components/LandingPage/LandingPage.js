@@ -7,6 +7,7 @@ import StadiumGoods from '../../public/images/stadiumgoods.png';
 import FlightClub from '../../public/images/flightclub.png';
 import css from './LandingPage.module.css';
 import PopularProducts from '../PopularProducts/PopularProducts';
+import SearchBar from '../SearchBar/SearchBar';
 
 function LandingPage({ popular }) {
 	const data = popular;
@@ -26,14 +27,7 @@ function LandingPage({ popular }) {
 					</div>
 					<div>
 						<h3 className={css.find}>Find your sneaker...</h3>
-						<div className={css.buttonContainer}>
-							<input
-								type="text"
-								placeholder="Jordan 1's"
-								className={css.search}
-							/>
-							<h3 className={css.searchButton}>Search</h3>
-						</div>
+						<SearchBar />
 					</div>
 				</div>
 				<div>

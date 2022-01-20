@@ -32,3 +32,39 @@
 .title {
 	font-size: 14px;
 }
+
+.search {
+	background: linear-gradient(
+		91.03deg,
+		rgba(255, 255, 255, 0.6) 0%,
+		rgba(255, 255, 255, 0.2) 71.56%
+	);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 60px;
+	border: none;
+	width: 450px;
+	height: 55px;
+	padding-left: 30px;
+}
+
+.searchButton {
+	background-color: #ff8080;
+	font-size: 20px;
+	font-weight: 500;
+	color: white;
+	line-height: 24px;
+	border-radius: 60px;
+	width: 120px;
+	height: 55px;
+	text-align: center;
+	margin-left: -120px;
+	padding: 15px 0;
+	cursor: pointer;
+}
+
+.buttonContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
+}

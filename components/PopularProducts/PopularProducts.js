@@ -22,7 +22,7 @@ function PopularProducts({ popular }) {
 									key={sneaker._id}
 									passHref
 								>
-									<div className={css.card}>
+									<div key={i} className={css.card}>
 										<Image
 											className={css.thumbnail}
 											src={sneaker.thumbnail}

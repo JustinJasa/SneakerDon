@@ -6,7 +6,6 @@ import css from './SneakerDetail.module.css';
 import ResellLinks from '../ResellLinks/ResellLinks';
 import PriceTable from '../PriceTable/PriceTable';
 import RelatedProducts from '../RelatedProducts/RelatedProducts';
-import { Container } from 'react-bootstrap';
 
 function SneakerDetail({ data }) {
 	const sneakerData = data;
