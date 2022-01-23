@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { server } from '../../config';
 import SneakerDetail from '../../components/SneakerDetail/SneakerDetail';
+import { useRouter } from 'next/router';
 
-export const getStaticPaths = async () => {
-	const res = await fetch(`${server}/products`);
-	const sneakers = await res.json();
+export async function getServerSideProps(context) {
+	const styleID = context.query.id;
 
-	const paths = sneakers.map((sneaker) => ({
-		params: {
-			id: sneaker.styleID,
-		},
-	}));
-
-	return { paths, fallback: false };
-};
-
-export const getStaticProps = async ({ params }) => {
-	const res = await fetch(`${server}/sneakers/${params.id}`);
+	const res = await fetch(`${server}/sneakers/${styleID}`);
 	const data = await res.json();
 
 	return {
@@ -24,14 +14,12 @@ export const getStaticProps = async ({ params }) => {
 			sneakers: data,
 		},
 	};
-};
+}
 
-function Details(props) {
-	const data = props.sneakers;
-
+function Details({ sneakers }) {
 	return (
 		<div>
-			<SneakerDetail data={data} />
+			<SneakerDetail data={sneakers} />
 		</div>
 	);
 }

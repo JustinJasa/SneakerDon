@@ -3,9 +3,12 @@ import css from './PopularProducts.module.css';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function PopularProducts({ popular }) {
 	const data = popular;
+
+	const router = useRouter();
 
 	return (
 		<div>
@@ -17,22 +20,20 @@ function PopularProducts({ popular }) {
 					{data.slice(0, 4).map((sneaker, i) => {
 						return (
 							<>
-								<Link
-									href={`/sneakers/${sneaker.styleID}`}
-									key={sneaker._id}
-									passHref
+								<div
+									key={i}
+									className={css.card}
+									onClick={() => router.push(`/?sneakers=${sneaker.styleID}`)}
 								>
-									<div key={i} className={css.card}>
-										<Image
-											className={css.thumbnail}
-											src={sneaker.thumbnail}
-											alt={sneaker.shoeName}
-											width={200}
-											height={200}
-										/>
-										<h2 className={css.title}>{sneaker.shoeName}</h2>
-									</div>
-								</Link>
+									<Image
+										className={css.thumbnail}
+										src={sneaker.thumbnail}
+										alt={sneaker.shoeName}
+										width={200}
+										height={200}
+									/>
+									<h2 className={css.title}>{sneaker.shoeName}</h2>
+								</div>
 							</>
 						);
 					})}

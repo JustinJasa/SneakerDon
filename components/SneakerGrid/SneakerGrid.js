@@ -7,6 +7,7 @@ import { server } from '../../config';
 import SearchBar from '../SearchBar/SearchBar';
 import InitialProducts from '../InitialProducts/InitialProducts';
 import SearchedProducts from '../SearchedProducts/SearchedProducts';
+import Spinner from '../Spinner/Spinner';
 
 const fetcher = async () => {
 	const res = await fetch(`${server}/products`);
@@ -19,7 +20,7 @@ function SneakerGrid() {
 	const [search, setSearch] = useState('');
 
 	if (error) return 'An error has occured';
-	if (!data) return 'loading...';
+	if (!data) return <Spinner />;
 
 	return (
 		<div className={css.container}>
