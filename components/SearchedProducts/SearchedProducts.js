@@ -37,7 +37,12 @@ function SearchedProducts({ searched }) {
 									width={200}
 									height={200}
 								/>
+								<hr />
 								<h2 className={css.title}>{sneaker.shoeName}</h2>
+								<p className={css.description}>
+									{`${sneaker.description.substring(0, 120)}...` ||
+										`No description`}
+								</p>
 							</div>
 						</>
 					);

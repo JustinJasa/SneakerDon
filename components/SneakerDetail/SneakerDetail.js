@@ -29,7 +29,9 @@ function SneakerDetail({ data }) {
 			</div>
 			<div className={css.descriptionContainer}>
 				<h2 className={css.descriptionTitle}>Sneaker Description</h2>
-				<p className={css.description}>{data.description}</p>
+				<p className={css.description}>
+					{data.description || 'No Description'}
+				</p>
 			</div>
 			<hr />
 			<div className={css.detailsContainer}>
@@ -56,7 +58,7 @@ function SneakerDetail({ data }) {
 			</div>
 			<hr />
 			<PriceTable priceData={sneakerData} />
-			<RelatedProducts />
+			<RelatedProducts related={sneakerData} />
 		</div>
 	);
 }

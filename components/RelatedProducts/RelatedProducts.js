@@ -1,6 +1,8 @@
 import React from 'react';
 
-function RelatedProducts() {
+function RelatedProducts(props) {
+	console.log(props);
+
 	return (
 		<div>
 			<p>hi</p>

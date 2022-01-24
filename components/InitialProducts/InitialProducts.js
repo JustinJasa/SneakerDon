@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import css from './InitialProducts.module.css';
 
 function InitialProducts({ data }) {
+	console.log(data);
+
 	return (
 		<div className={css.grid}>
 			{data.map((sneaker, i) => {
@@ -22,7 +24,12 @@ function InitialProducts({ data }) {
 									width={200}
 									height={200}
 								/>
+								<hr />
 								<h2 className={css.title}>{sneaker.shoeName}</h2>
+								<p className={css.description}>
+									{`${sneaker.description.substring(0, 120)}...` ||
+										`No description`}
+								</p>
 							</div>
 						</Link>
 					</>

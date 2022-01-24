@@ -16,28 +16,27 @@ function PopularProducts({ popular }) {
 				<h1>Popular Sneakers</h1>
 			</div>
 			<div className={css.container}>
-				<div className={css.carousel}>
-					{data.slice(0, 4).map((sneaker, i) => {
-						return (
-							<>
-								<div
-									key={i}
-									className={css.card}
-									onClick={() => router.push(`/?sneakers=${sneaker.styleID}`)}
-								>
-									<Image
-										className={css.thumbnail}
-										src={sneaker.thumbnail}
-										alt={sneaker.shoeName}
-										width={200}
-										height={200}
-									/>
-									<h2 className={css.title}>{sneaker.shoeName}</h2>
-								</div>
-							</>
-						);
-					})}
-				</div>
+				{data.slice(0, 10).map((sneaker, i) => {
+					return (
+						<>
+							<div
+								key={i}
+								className={css.card}
+								onClick={() => router.push(`/?sneakers=${sneaker.styleID}`)}
+							>
+								<Image
+									className={css.thumbnail}
+									src={sneaker.thumbnail}
+									alt={sneaker.shoeName}
+									width={200}
+									height={200}
+								/>
+								<hr />
+								<h2 className={css.title}>{sneaker.shoeName}</h2>
+							</div>
+						</>
+					);
+				})}
 			</div>
 		</div>
 	);
