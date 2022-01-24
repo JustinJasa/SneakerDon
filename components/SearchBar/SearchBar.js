@@ -3,7 +3,6 @@ import css from './SearchBar.module.css';
 import { useRouter } from 'next/router';
 import { client } from '../../config';
 import { server } from '../../config';
-import useSWR from 'swr';
 
 function SearchBar() {
 	const [input, setInput] = useState('');

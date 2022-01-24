@@ -22,7 +22,7 @@ function PopularProducts({ popular }) {
 							<div
 								key={i}
 								className={css.card}
-								onClick={() => router.push(`/?sneakers=${sneaker.styleID}`)}
+								onClick={() => router.push(`/sneakers/${sneaker.styleID}`)}
 							>
 								<Image
 									className={css.thumbnail}
