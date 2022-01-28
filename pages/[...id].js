@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { server } from '../../config';
-import SneakerDetail from '../../components/SneakerDetail/SneakerDetail';
+import { server } from '../config';
+import SneakerDetail from '../components/SneakerDetail/SneakerDetail';
 import { useRouter } from 'next/router';
 
 export async function getServerSideProps(context) {

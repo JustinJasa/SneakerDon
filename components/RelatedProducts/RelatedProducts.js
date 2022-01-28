@@ -20,14 +20,14 @@ function RelatedProducts({ related }) {
 		setRelatedSneakers(data);
 	};
 
-	// implement better related fetching later
+	// implement better related data fetching later
 	// const getRandomNumber = () => {
 	// 	setRandom1(Math.floor(Math.random() * 3 + 2));
 	// 	setRandom2(Math.floor(Math.random() * 3 + 5));
 	// };
 
 	const getProductPage = (sneaker) => {
-		router.push(`/sneakers/${sneaker.styleID}`);
+		router.push(`/${sneaker.styleID}`);
 	};
 
 	useEffect(() => {

@@ -4,18 +4,12 @@ import Link from 'next/link';
 import css from './InitialProducts.module.css';
 
 function InitialProducts({ data }) {
-	console.log(data);
-
 	return (
-		<div className={css.grid}>
+		<div className={css.container}>
 			{data.map((sneaker, i) => {
 				return (
 					<>
-						<Link
-							href={`/sneakers/${sneaker.styleID}`}
-							key={sneaker._id}
-							passHref
-						>
+						<Link href={`/${sneaker.styleID}`} key={sneaker._id} passHref>
 							<div className={css.card}>
 								<Image
 									className={css.thumbnail}

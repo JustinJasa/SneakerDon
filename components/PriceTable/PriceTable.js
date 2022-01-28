@@ -4,7 +4,6 @@ import StockX from '../../public/images/Stockx.png';
 import Goat from '../../public/images/goat.png';
 import FlightClub from '../../public/images/flightclub.png';
 import StadiumGoods from '../../public/images/stadiumgoods.png';
-import Image from 'next/image';
 import css from './PriceTable.module.css';
 
 function PriceTable({ priceData }) {
@@ -33,7 +32,7 @@ function PriceTable({ priceData }) {
 		<div className={css.tableContainer}>
 			<h2 className={css.heading}>Marketplace Prices</h2>
 			<div className={css.priceTable}>
-				<Table responsive>
+				<Table striped bordered hover responsive>
 					<thead>
 						<tr>
 							<th>US Size</th>
@@ -45,7 +44,7 @@ function PriceTable({ priceData }) {
 					<tbody>
 						<tr>
 							<td onClick={() => window.open(priceData.resellLinks.stockX)}>
-								<Image src={StockX} alt="stockX" width={100} height={56} />
+								<h4 className={css.title}>Stock X</h4>
 							</td>
 							{Array.from(shoeSizes).map((size, index) => (
 								<td key={index}>
@@ -54,14 +53,14 @@ function PriceTable({ priceData }) {
 										target="_blank"
 										rel="noreferrer"
 									>
-										{prices.stockX[size] || '--'}
+										{prices.stockX[size] || '-'}
 									</a>
 								</td>
 							))}
 						</tr>
 						<tr>
 							<td onClick={() => window.open(priceData.resellLinks.goat)}>
-								<Image src={Goat} alt="stockX" width={100} height={56} />
+								<h4 className={css.title}>Goat</h4>
 							</td>
 							{Array.from(shoeSizes).map((size, index) => (
 								<td key={index}>
@@ -70,14 +69,14 @@ function PriceTable({ priceData }) {
 										target="_blank"
 										rel="noreferrer"
 									>
-										{prices.goat[size] || '--'}
+										{prices.goat[size] || '-'}
 									</a>
 								</td>
 							))}
 						</tr>
 						<tr>
 							<td onClick={() => window.open(priceData.resellLinks.flightClub)}>
-								<Image src={FlightClub} alt="stockX" width={100} height={56} />
+								<h4 className={css.title}>Flight Club</h4>
 							</td>
 							{Array.from(shoeSizes).map((size, index) => (
 								<td key={index}>
@@ -89,7 +88,7 @@ function PriceTable({ priceData }) {
 										target="_blank"
 										rel="noreferrer"
 									>
-										{prices.flightClub[size] || '--'}
+										{prices.flightClub[size] || '-'}
 									</a>
 								</td>
 							))}
@@ -103,12 +102,7 @@ function PriceTable({ priceData }) {
 									)
 								}
 							>
-								<Image
-									src={StadiumGoods}
-									alt="stockX"
-									width={100}
-									height={56}
-								/>
+								<h4 className={css.title}>Stadium Goods</h4>
 							</td>
 							{Array.from(shoeSizes).map((size, index) => (
 								<td key={index}>
@@ -124,7 +118,7 @@ function PriceTable({ priceData }) {
 											{prices.stadiumGoods[size]}
 										</a>
 									) : (
-										'--'
+										'-'
 									)}
 								</td>
 							))}

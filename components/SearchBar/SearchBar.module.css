@@ -14,7 +14,7 @@
 
 .searchButton {
 	background-color: #ff8080;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 500;
 	color: white;
 	line-height: 24px;
@@ -30,4 +30,14 @@
 .buttonContainer {
 	display: flex;
 	align-items: center;
+}
+
+@media only screen and (max-width: 425px) {
+	.searchButton {
+		margin-left: -80px;
+	}
+
+	.search {
+		width: 300px;
+	}
 }

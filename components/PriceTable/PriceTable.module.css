@@ -4,14 +4,35 @@
 
 .tableContainer {
 	margin-top: 100px;
+	text-align: -webkit-center;
 }
 
 .priceTable {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #ededed;
+	padding: 30px;
+	overflow: auto;
+	border-radius: 40px;
+	min-width: 90vw;
+	text-align: center;
+	border: white;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+	border: 1px solid #bfbfbf;
+	overflow-x: auto;
 }
 
 .cell {
 	text-align: center;
+}
+
+.title {
+	white-space: nowrap;
+}
+
+@media only screen and (max-width: 1500px) {
+	.priceTable {
+		justify-content: start;
+	}
 }

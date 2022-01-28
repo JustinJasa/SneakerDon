@@ -16,26 +16,26 @@ function LandingPage({ popular }) {
 		<>
 			<section className={css.container}>
 				<div className={css.descriptionContainer}>
-					<div>
-						<h2 className={css.slogan}>
-							Track your favourite sneakers with ease!
-						</h2>
-						<p className={css.description}>
-							At SneakerDon we&apos;ve made it easy to track the prices of your
-							favourite sneaker from the top sneaker marketplaces
-						</p>
-					</div>
+					<h2 className={css.slogan}>
+						Track your favourite sneakers with ease!
+					</h2>
+					<p className={css.description}>
+						At SneakerDon we&apos;ve made it easy to track the prices of your
+						favourite sneaker from the top sneaker marketplaces
+					</p>
+
 					<div>
 						<h3 className={css.find}>Find your sneaker...</h3>
 						<SearchBar />
 					</div>
 				</div>
-				<div>
+				<div className={css.imageContainer}>
 					<Image
 						src={LandingPageImage}
 						alt="Jordan 1's"
 						width={600}
 						height={600}
+						className={css.landingPage}
 					/>
 					<div className={css.logoContainers}>
 						<Image

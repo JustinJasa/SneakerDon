@@ -32,6 +32,7 @@
 	margin: auto;
 	text-align: center;
 	margin-bottom: 20px;
+	flex-wrap: wrap;
 }
 
 .detailTitle {
@@ -69,4 +70,28 @@
 
 .brandTitle {
 	margin-right: 10px;
+}
+
+@media only screen and (max-width: 676px) {
+	.headerContainer {
+		flex-direction: column;
+	}
+
+	.description {
+		font-size: 18px;
+		width: 80%;
+	}
+
+	.detail {
+		font-size: 18px;
+		white-space: nowrap;
+	}
+
+	.detailTitle {
+		white-space: nowrap;
+	}
+
+	.descriptionTitle {
+		font-size: 24px;
+	}
 }

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import css from './PopularProducts.module.css';
-import Slider from 'react-slick';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 function PopularProducts({ popular }) {
@@ -22,7 +20,7 @@ function PopularProducts({ popular }) {
 							<div
 								key={i}
 								className={css.card}
-								onClick={() => router.push(`/sneakers/${sneaker.styleID}`)}
+								onClick={() => router.push(`/${sneaker.styleID}`)}
 							>
 								<Image
 									className={css.thumbnail}

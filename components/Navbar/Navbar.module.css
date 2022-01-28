@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 .navButtons {
@@ -12,8 +13,10 @@
 .navbar {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding-left: 40px;
 	padding-right: 40px;
+	flex-wrap: wrap;
 }
 
 .navButtonWhite {
@@ -25,4 +28,47 @@
 	margin-left: 40px;
 	margin-right: 40px;
 	border-radius: 60px;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media only screen and (max-width: 425px) {
+	.hamburger {
+		display: block;
+		width: 30px;
+		height: 30px;
+	}
+	.container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.navbar {
+		justify-content: space-between;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.navButtons {
+		font-size: 16px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.navButtonWhite {
+		background-color: #ff8080;
+		color: white;
+		text-align: center;
+		padding: 20px;
+		border-radius: 60px;
+		font-size: 16px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.navbar {
+		justify-content: center;
+	}
 }

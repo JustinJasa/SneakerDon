@@ -7,28 +7,36 @@ import css from './SearchedProducts.module.css';
 import { useRouter } from 'next/router';
 
 function SearchedProducts({ searched }) {
-	const [sneakers, setSneakers] = useState();
+	let sneakers = searched;
+
+	// const [sneakers, setSneakers] = useState();
+
+	// setSneakers(searched);
+
+	console.log(sneakers);
+
 	const router = useRouter();
 
-	const fetchData = async () => {
-		const res = await fetch(`${server}/search/${searched}`);
-		const data = await res.json();
-		setSneakers(data);
-	};
+	// const fetchData = async () => {
+	// 	const res = await fetch(`${server}/search/${searched}`);
+	// 	const data = await res.json();
+	// 	setSneakers(data);
+	// };
 
-	useEffect(() => {
-		fetchData();
-	}, [searched]);
+	// useEffect(() => {
+	// 	fetchData();
+	// }, [searched]);
 
 	return (
-		<div className={css.grid}>
-			{sneakers &&
-				sneakers.map((sneaker, i) => {
+		<div className={css.container}>
+			{sneakers ? (
+				sneakers.map((sneaker) => {
 					return (
 						<>
 							<div
 								className={css.card}
-								onClick={() => router.push(`/sneakers/${sneaker.styleID}`)}
+								onClick={() => router.push(`/${sneaker.styleID}`)}
+								key={sneaker._id}
 							>
 								<Image
 									className={css.thumbnail}
@@ -46,7 +54,10 @@ function SearchedProducts({ searched }) {
 							</div>
 						</>
 					);
-				})}
+				})
+			) : (
+				<div>YEEEEEEEE</div>
+			)}
 		</div>
 	);
 }
