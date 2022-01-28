@@ -6,8 +6,6 @@ function SearchBar() {
 	const [input, setInput] = useState('');
 	const router = useRouter();
 
-	console.log(input);
-
 	return (
 		<div>
 			<div className={css.buttonContainer}>

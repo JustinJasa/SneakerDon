@@ -8,24 +8,7 @@ import { useRouter } from 'next/router';
 
 function SearchedProducts({ searched }) {
 	let sneakers = searched;
-
-	// const [sneakers, setSneakers] = useState();
-
-	// setSneakers(searched);
-
-	console.log(sneakers);
-
 	const router = useRouter();
-
-	// const fetchData = async () => {
-	// 	const res = await fetch(`${server}/search/${searched}`);
-	// 	const data = await res.json();
-	// 	setSneakers(data);
-	// };
-
-	// useEffect(() => {
-	// 	fetchData();
-	// }, [searched]);
 
 	return (
 		<div className={css.container}>

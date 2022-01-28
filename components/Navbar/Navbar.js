@@ -12,11 +12,8 @@ export default function Navbar() {
 	const [screenSize, setScreenSize] = useState();
 	const [toggle, setToggle] = useState(true);
 
-	console.log(toggle);
-
 	useEffect(() => {
 		let windowSize = window.innerWidth;
-		console.log(windowSize);
 		setScreenSize(windowSize);
 	}, []);
 
