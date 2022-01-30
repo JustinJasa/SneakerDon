@@ -1,0 +1,49 @@
+.input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3em;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	height: 350px;
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #fefefe;
+	border: 1px solid #ffffff;
+	box-sizing: border-box;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	margin: 30px;
+	cursor: pointer;
+	transform: scale(1);
+	transition: transform 250ms ease-out;
+}
+
+.card:hover {
+	transform: scale(1.1);
+	transition: all 0.3s ease-in;
+}
+
+.title {
+	font-size: 14px;
+	font-weight: 700;
+	white-space: wrap;
+	text-align: center;
+}
+
+.description {
+	font-size: 13px;
+	padding: 10px;
+}
