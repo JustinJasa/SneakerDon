@@ -11,12 +11,14 @@ function SneakerDetail({ data }) {
 	const sneakerData = data;
 	const images = sneakerData.imageLinks;
 	const links = sneakerData.resellLinks;
+	const thumbnail = sneakerData.thumbnail;
+	console.log(data);
 
 	return (
 		<div>
 			<div className={css.headerContainer}>
 				<div>
-					<ImageCarousel data={images} />
+					<ImageCarousel data={images} thumbnail={thumbnail} />
 				</div>
 				<div>
 					<h2>{data.shoeName}</h2>
