@@ -12,7 +12,6 @@ function SneakerDetail({ data }) {
 	const images = sneakerData.imageLinks;
 	const links = sneakerData.resellLinks;
 	const thumbnail = sneakerData.thumbnail;
-	console.log(data);
 
 	return (
 		<div>

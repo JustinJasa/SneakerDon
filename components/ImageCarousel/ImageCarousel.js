@@ -9,8 +9,6 @@ function ImageCarousel({ data, thumbnail }) {
 	const sneakerImage = data;
 	const replacementImage = thumbnail;
 
-	console.log(sneakerImage);
-
 	const images = () => {
 		return (
 			<>
