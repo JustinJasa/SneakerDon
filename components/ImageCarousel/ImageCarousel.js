@@ -5,14 +5,24 @@ import Carousel from 'react-bootstrap/Carousel';
 
 // Carousel Currently not working using one image at the moment
 
-function ImageCarousel({ data }) {
+function ImageCarousel({ data, thumbnail }) {
 	const sneakerImage = data;
+	const replacementImage = thumbnail;
 
 	const images = () => {
 		return (
 			<>
 				<div>
-					<Image src={sneakerImage[0]} alt="image" width={500} height={500} />
+					{sneakerImage.length > 0 ? (
+						<Image src={sneakerImage[0]} alt="image" width={500} height={500} />
+					) : (
+						<Image
+							src={replacementImage}
+							alt="image"
+							width={500}
+							height={500}
+						/>
+					)}
 				</div>
 			</>
 		);
