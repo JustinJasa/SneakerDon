@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# SneakerDon
 
-First, run the development server:
+SneakerDon is a front-end application that tracks prices of sneakers using the Sneaks API [found here](https://www.npmjs.com/package/sneaks-api) from the top 4 most popular marketplaces on the web. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Stock X
+- GOAT
+- FlightClub
+- Stadium Goods
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Process
 
-## Learn More
+The technologies used to make this app were 
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js (Frontend)
+- Express.js (Creating API endpoints for data)
+- Figma (Desiging app and its features)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I initially created a design on figma for the app, on both desktop and mobile devices with the following features.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Searching 
+- Dynamic Routing on Products
+- Live Tracking of Price data
+- Related Products
 
-## Deploy on Vercel
+In terms of data fetching I learn't I mixture of different data fetching techniques such as client-side data fetching and server side data fetching.
+# Final Thoughts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Thought this project was quite a small project, I've enjoyed learning the Next.js framework and learning how to create and use simple API endpoints to fetch data. Sneakers are a great passion of mine and in the future I wish to expand this project with more features and hopefully turn this into a full-stack application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
