@@ -19,7 +19,7 @@ The technologies used to make this app were
 - Express.js (Creating API endpoints for data)
 - Figma (Desiging app and its features)
 
-I initially created a design on figma for the app, on both desktop and mobile devices with the following features.
+I initially created a design on [figma](https://www.figma.com/file/UWNcNmBPc3Ao8cIAqlBMeM/SneakerDon?node-id=10%3A99) for the app, on both desktop and mobile devices with the following features.
 
 - Searching 
 - Dynamic Routing on Products
