@@ -13,7 +13,6 @@ function PriceTable({ priceData }) {
 		`https://v6.exchangerate-api.com/v6/0d0a0747b0adbacd91aba2b9/latest/USD`,
 		fetcher
 	);
-	console.log(data);
 
 	const [currencies] = useState(['EUR, AUD, USD']);
 
