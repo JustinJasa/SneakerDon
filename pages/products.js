@@ -15,13 +15,6 @@ function products({ initialData, searchedData }) {
 				<SearchBar />
 			</div>
 			<SneakerGrid searchedData={searchedData} initialData={initialData} />
-
-			{/* <SneakerGrid initialData={initialData} /> */}
-			{/* {window.location.href.indexOf('search') ? (
-				<InitialProducts data={initialData} />
-			) : (
-				<SearchedProducts searched={searchedData} />
-			)} */}
 		</div>
 	);
 }

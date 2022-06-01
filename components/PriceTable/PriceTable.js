@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
-import StockX from '../../public/images/Stockx.png';
-import Goat from '../../public/images/goat.png';
-import FlightClub from '../../public/images/flightclub.png';
-import StadiumGoods from '../../public/images/stadiumgoods.png';
 import css from './PriceTable.module.css';
+import useSWR from 'swr';
+
+const fetcher = async (...args) => {
+	fetch(...args).then((res) => res.json());
+};
 
 function PriceTable({ priceData }) {
+	// fetches currency data
+	const { data, error } = useSWR(
+		`https://v6.exchangerate-api.com/v6/0d0a0747b0adbacd91aba2b9/latest/USD`,
+		fetcher
+	);
+
+	const [currencies] = useState(['EUR, AUD, USD']);
+
 	const sizes = new Set([]);
 	let shoeSizes;
 	let prices = priceData.resellPrices;
@@ -31,6 +40,9 @@ function PriceTable({ priceData }) {
 	return (
 		<div className={css.tableContainer}>
 			<h2 className={css.heading}>Marketplace Prices</h2>
+			{/* <select id="size" name="size">
+				{}
+			</select> */}
 			<div className={css.priceTable}>
 				<Table striped bordered hover responsive>
 					<thead>
@@ -53,7 +65,12 @@ function PriceTable({ priceData }) {
 										target="_blank"
 										rel="noreferrer"
 									>
-										{prices.stockX[size] || '-'}
+										{/* {(data.conversion_rates.AUD &&
+											Math.round(
+												prices.stockX[size] * data.conversion_rates.AUD
+											)) ||
+											'-'} */}
+										{Math.round(prices.stockX[size]) || '--'}
 									</a>
 								</td>
 							))}
@@ -69,7 +86,12 @@ function PriceTable({ priceData }) {
 										target="_blank"
 										rel="noreferrer"
 									>
-										{prices.goat[size] || '-'}
+										{/* {(data.conversion_rates.AUD &&
+											Math.round(
+												prices.goat[size] * data.conversion_rates.AUD
+											)) ||
+											'-'} */}
+										{Math.round(prices.goat[size]) || '--'}
 									</a>
 								</td>
 							))}
@@ -88,7 +110,12 @@ function PriceTable({ priceData }) {
 										target="_blank"
 										rel="noreferrer"
 									>
-										{prices.flightClub[size] || '-'}
+										{/* {(data.conversion_rates.AUD &&
+											Math.round(
+												prices.flightClub[size] * data.conversion_rates.AUD
+											)) ||
+											'-'} */}
+										{Math.round(prices.flightClub[size]) || '--'}
 									</a>
 								</td>
 							))}
@@ -115,7 +142,9 @@ function PriceTable({ priceData }) {
 											target="_blank"
 											rel="noreferrer"
 										>
-											{prices.stadiumGoods[size]}
+											{(data.conversion_rates.AUD &&
+												Math.round(prices.stadiumGoods[size])) ||
+												'-'}
 										</a>
 									) : (
 										'-'

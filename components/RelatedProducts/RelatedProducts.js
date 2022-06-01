@@ -32,7 +32,7 @@ function RelatedProducts({ related }) {
 
 	useEffect(() => {
 		fetchRelated();
-	}, []);
+	});
 
 	return (
 		<div>
