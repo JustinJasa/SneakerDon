@@ -26,7 +26,7 @@ I initially created a design on [figma](https://www.figma.com/file/UWNcNmBPc3Ao8
 - Live Tracking of Price data
 - Related Products
 
-In terms of data fetching I learn't I mixture of different data fetching techniques such as client-side data fetching and server side data fetching.
+In terms of data fetching I learn't a mixture of different data fetching techniques such as client-side data fetching and server side data fetching.
 # Final Thoughts
 
 Thought this project was quite a small project, I've enjoyed learning the Next.js framework and learning how to create and use simple API endpoints to fetch data. Sneakers are a great passion of mine and in the future I wish to expand this project with more features and hopefully turn this into a full-stack application.
